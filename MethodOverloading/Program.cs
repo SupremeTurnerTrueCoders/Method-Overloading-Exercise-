@@ -2,35 +2,19 @@
 {
     public class Program
     {
-        public static int add(int a, int b)
+        static void Main(string[] args)
         {
-            return a + b;
+            var add1 = Methods.Add(1, 2); 
+            Console.WriteLine(add1);
+
+
+            var add2 = Methods.Add(4.5m, 2.5m);
+            Console.WriteLine(add2);
+
+            var add3 = Methods.Add(1 , 5 ,true);
+            Console.WriteLine(add3);
         }
-        public static Decimal Add(Decimal a, Decimal b)
-        {
 
-
-
-            return a + b;
-
-
-
-        }
-        public static string Add(int a, int b, bool withDollars)
-        {
-            if (withDollars && (a + b) != 1)
-            {
-                return $"{a + b} dollars";
-            }
-            else if (withDollars && (a + b) == 1)
-            {
-                return $"{a + b} dollars";
-            }
-            else
-            {
-                return $"{a + b}";
-            }
-
-        }
+        
     }
 }
